@@ -31,7 +31,7 @@ $schwinn->weightKg=13.61;
 
 echo "This is the brand, model, year made and description of the bike. " . $schwinn->name() . "<br>";
 echo "This is the weight of the bike in kg. " . $schwinn->weightKg . "<br>";
-echo "This is the weight of the bike in pounds. " . $schwinn->weightLbs() . "<br>";
+echo "This is the weight of the bike in pounds. " . $schwinn->weightLbs() . "<br> <br>";
 
 
 
