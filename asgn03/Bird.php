@@ -26,8 +26,9 @@ class Bird {
         return  $flying_string ;
     } */
 
-    public function can_fly() {
+    public static function can_fly() {
       $flying_string = static::$flying == "yes" ? $flying_string = "can fly" : "is stuck on the ground";
+      return $flying_string;
     }
 }
 
@@ -43,22 +44,6 @@ class Kiwi extends Bird {
     public $diet = "omnivorous";
     public static $flying = "no";
 }
-
-echo 'Bird count: ' . Bird::$instance_count . '<br>';
-echo 'Yellow bellied fly catcher count: ' . YellowBelliedFlyCatcher::$instance_count . '<br>';
-echo 'Kiwi count: ' . Kiwi::$instance_count . '<br>';
-echo '<hr>';
-
-$bird = Bird::create();
-$yellowBelliedFlyCatcher = YellowBelliedFlyCatcher::create();
-$kiwi = Kiwi::create();
-
-echo 'Bird count: ' . Bird::$instance_count . '<br>';
-echo 'Yellow bellied fly catcher count: ' . YellowBelliedFlyCatcher::$instance_count . '<br>';
-echo 'Kiwi count: ' . Kiwi::$instance_count . '<br>';
-echo '<hr>';
-
-echo 'Yellow bellied fly catchers have ' . YellowBelliedFlyCatcher::$egg_num . ' eggs. <br>';
 
 
 ?>
