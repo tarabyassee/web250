@@ -15,6 +15,8 @@ $acadianFlycatcher = new Bird(['commonName' => 'Acadian Flycatcher', 'latinName'
 $easternTowhee = new Bird(['commonName' => 'Eastern Towhee', 'latinName' => 'Pipilo Eurythrothalamus']);
 
 echo 'The common name is ' . $acadianFlycatcher->commonName . '<br>';
+echo 'The latin name is ' . $acadianFlycatcher->latinName . '<br> <hr>';
 echo 'The common name is ' . $easternTowhee->commonName . '<br>';
+echo 'The latin name is ' . $easternTowhee->latinName . '<br>';
 
 ?>

@@ -14,7 +14,7 @@ echo "Common Name: " . $robin->commonName . "<br>";
 echo "Latin Name: " . $robin->latinName . "<br>";
 echo "<hr>";
 
-$towhee = new Bird("Eastern Towhee", "Pipilo erythropthalmus");
+$towhee = new Bird("Eastern Towhee", "Pipilo erythrophthalmus");
 echo "Common Name: " . $towhee->commonName . "<br>";
 echo "Latin Name: " . $towhee->latinName . "<br>";
 ?>
