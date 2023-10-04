@@ -1,9 +1,7 @@
 <?php
 
   class ParseCSV {
-    /* this property sets the delimiter the parse function looks for in the file it read the data from. In this example, it is set to a comma. */
     public static $delimiter = ',';
-    /* this property is the name of the file to be read */
     private $filename;
     private $header;
     private $data=[];
@@ -15,7 +13,7 @@
         $this->file($filename);
       }
     }
-    /* this function called file, takes and checks to make sure that the property, $filename, exists and is readable. It returns error messages if the file named   */
+
     public function file($filename) {
       if(!file_exists($filename)) {
         echo "File does not exist.";
