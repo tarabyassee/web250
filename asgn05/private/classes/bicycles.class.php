@@ -33,8 +33,8 @@ class Bicycle {
     $this->description = $args['description'] ?? '';
     $this->gender = $args['gender'] ?? '';
     $this->color = $args['color'] ?? '';
-    $this->price = $args['price'] ?? '';
-    $this->weightKg = $args['weightKg'] ?? 0;
+    $this->price = $args['price'] ?? 0;
+    $this->weightKg = $args['weightKg'] ?? 0.0;
     $this->conditionId = $args['conditionId'] ?? 3;
 
 /*     foreach($args as $k => $v) {

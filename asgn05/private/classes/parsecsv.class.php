@@ -1,10 +1,12 @@
 <?php
 
   class ParseCSV {
+    /* this property sets the delimiter the parse function looks for in the file it read the data from. In this example, it is set to a comma. */
     public static $delimiter = ',';
+    /* this property is the name of the file to be read */
     private $filename;
     private $header;
-    private $data;
+    private $data=[];
     private $rowCount = 0;
 
 
@@ -13,7 +15,7 @@
         $this->file($filename);
       }
     }
-
+    /* this function called file, takes and checks to make sure that the property, $filename, exists and is readable. It returns error messages if the file named   */
     public function file($filename) {
       if(!file_exists($filename)) {
         echo "File does not exist.";
@@ -25,19 +27,14 @@
       $this->filename = $filename;
       return true;
     }
+
     public function parse() {
       if(!isset($this->filename)) {
         echo "file not set.";
         return false;
       }
-
       $this->reset();
       $file = fopen($this->filename, 'r');
-      //grab the file with the name 'filename' and read the data into a variable called $file
-      //while it is not the end of the file, use fgetcsv to parse the data from $file and put it into an array. Each row of data will be a record, with unlimited length for each line, using the delimiter of a comma
-      //if a row of data ($row) is empty, keep going until the end of the file
-      //next, the if/else condition asks if the header property is not set, set it with the first row of the file. If this property($header) is set, combine the $header property with the row data.
-      //Close the file and return the array of data.
       while(!feof($file)) {
         $row = fgetcsv($file, 0, self::$delimiter);
         if($row == [NULL] || $row ===FALSE) {

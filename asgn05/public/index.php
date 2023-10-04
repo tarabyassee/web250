@@ -5,7 +5,7 @@
 <div id="main">
 
   <ul>
-    <li><a>View Our Inventory</a></li>
-    <li><a>About Us</a></li>
+    <li><a href="<?php echo urlFor('/bicycles.php'); ?>">View Our Inventory</a></li>
+    <li><a href="<?php echo urlFor('/about.php'); ?>">About Us</a></li>
   </ul>
 </div>
