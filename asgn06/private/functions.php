@@ -28,7 +28,7 @@ function isPostRequest() {
   return $_SERVER['REQUEST_METHOD'] == 'POST';
 }
 
-function isGEtRequest() {
+function isGetRequest() {
   return $_SERVER['REQUEST_METHOD'] == 'GET';
 }
 
