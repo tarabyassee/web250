@@ -6,3 +6,5 @@
     <li><a href="<?php echo urlFor('/about.php'); ?>">About Us</a></li>
   </ul>
 </div>
+
+<?php include(SHARED_PATH . '/public_footer.php'); ?>
