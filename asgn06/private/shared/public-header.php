@@ -1,9 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
   <head>
-    <title>WNC Birds <?php if(isset($page_title)) { echo '- ' . h($page_title); } ?></title>
     <meta charset="utf-8">
+    <title>WNC Birds <?php if(isset($page_title)) { echo '- ' . h($page_title); } ?></title>
+    <link rel="stylesheet" href="<?php echo urlFor('stylesheet/style.css');?>">
   </head>
 
   <body>
@@ -15,4 +16,6 @@
         </a>
       </h1>
     </header>
+  </body>
+</html>
     

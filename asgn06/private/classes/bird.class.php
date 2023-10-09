@@ -7,7 +7,7 @@
     public $behavior;
     public $backyardTips;
     
-    protected $conservationId;
+    protected $conservationId = 1;
 
     protected const CONSERVATION_OPTIONS = [
       1 => 'Low concern',
