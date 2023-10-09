@@ -9,5 +9,17 @@
     public $backyardTips;
 
 
+    public function __construct($args=[]) {
+      $this->commonName = $args['commonName'] ?? '';
+      $this->habitat = $args['habitat'] ?? '';
+      $this->food = $args['food'] ?? '';
+      $this->nestPlacement = $args['nestPlacement'] ?? '';
+      $this->behavior = $args['behavior'] ?? '';
+      $this->conservationId = $args['conservationId'] ?? '';
+      $this->backyardTips = $args['backyardTips'] ?? '';
+    }
+
   }
+
+
 ?>
