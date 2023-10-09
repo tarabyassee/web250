@@ -28,6 +28,9 @@
 
   require_once('functions.php');
 
+  require_once('classes/bird.class.php');
+  require_once('classes/parsecsv.class.php');
+
   //require_once('classes/bicycles.class.php');
 
   

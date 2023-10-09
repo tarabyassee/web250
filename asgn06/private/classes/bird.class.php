@@ -5,9 +5,16 @@
     public $food;
     public $nestPlacement;
     public $behavior;
-    public $conservationId;
     public $backyardTips;
+    
+    protected $conservationId;
 
+    protected const CONSERVATION_OPTIONS = [
+      1 => 'Low concern',
+      2 => 'Moderate concern',
+      3 => 'Extreme concern',
+      4 => 'Extinct'
+    ];
 
     public function __construct($args=[]) {
       $this->commonName = $args['commonName'] ?? '';
@@ -19,6 +26,13 @@
       $this->backyardTips = $args['backyardTips'] ?? '';
     }
 
+    public function conservation() {
+      if($this->conservationId > 0) {
+        return self::CONSERVATION_OPTIONS[$this->conservationId];
+      } else {
+        return "Unknown";
+      }
+    }
   }
 
 
