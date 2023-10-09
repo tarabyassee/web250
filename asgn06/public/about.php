@@ -7,4 +7,4 @@
     <h2>About</h2>
     <p>This site lists some of the common birds of Western NC.</p>
 
-
+<?php include (SHARED_PATH . '/public-footer.php');?>

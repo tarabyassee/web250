@@ -1,6 +1,7 @@
 <?php 
   require_once('../private/initialize.php');
   $page_title = 'Sightings';
+  include(SHARED_PATH . '/public-header.php');
 
 ?>
 
@@ -34,3 +35,5 @@
   </tr>
   <?php } ?>
 </table>
+
+<?php include (SHARED_PATH . '/public-footer.php');?>
