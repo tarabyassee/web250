@@ -5,9 +5,16 @@
 
 ?>
 
+
 <h2>Bird inventory</h2>
 <p>This is a short list -- start your birding!</p>
-
+<div id="birdContainer">
+  <img src="images/carolinaWren.jpg">
+  <img src="images/tuftedTitmouse.jpg">
+  <img src="images/rubyThroatedHummingbird.jpg">
+  <img src="images/easternTowhee.jpg">
+  <img src="images/indigoBunting.jpg">
+</div>
 <table id="birds" border="1">
   <tr>
     <th>Common Name</th>
