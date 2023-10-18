@@ -15,7 +15,15 @@ class Bicycle {
     if(!$result) {
       exit('Database query failed.');
     }
-    return $result;
+    //convert results into objects
+    $objectArray = [];
+    while($record = $result->fetch_assoc()) {
+      $objectArray[] = self::instantiate($record);
+    };
+
+    $result->free();
+
+    return $objectArray;
   }
 
 
@@ -23,7 +31,19 @@ class Bicycle {
     $sql = "SELECT * FROM bicycles";
     return self::findBySql($sql);
   }
+
+  static protected function instantiate($record) {
+    $object = new self;
+    foreach($record as $property=>$value) {
+      if(property_exists($object, $property)) {
+        $object->$property = $value;
+        //remember $ is dynamic
+      }
+    }
+    return $object;
+  }
   //end of active record code//
+  public $id;
   public $brand;
   public $model;
   public $year;
