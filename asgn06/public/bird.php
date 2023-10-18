@@ -9,11 +9,11 @@
 <h2>Bird inventory</h2>
 <p>This is a short list -- start your birding!</p>
 <div id="birdContainer">
-  <img src="images/carolinaWren.jpg">
-  <img src="images/tuftedTitmouse.jpg">
-  <img src="images/rubyThroatedHummingbird.jpg">
-  <img src="images/easternTowhee.jpg">
-  <img src="images/indigoBunting.jpg">
+  <img src="images/carolinaWren.jpg" width="171" height="123">
+  <img src="images/tuftedTitmouse.jpg" width="161" height="121">
+  <img src="images/rubyThroatedHummingbird.jpg" width="227" height="120">
+  <img src="images/easternTowhee.jpg" width="1280" height="959">
+  <img src="images/indigoBunting.jpg" width="1280" height="960">
 </div>
 <table id="birds" border="1">
   <tr>
