@@ -98,6 +98,10 @@ class Bicycle {
     // }
   }
 
+  public function name() {
+    return "{$this->brand} {$this->model} {$this->year}";
+  }
+
   public function weight_kg() {
     return number_format($this->weight_kg, 2) . ' kg';
   }
