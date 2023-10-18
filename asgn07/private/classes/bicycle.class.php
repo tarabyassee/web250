@@ -26,10 +26,20 @@ class Bicycle {
     return $objectArray;
   }
 
-
   static public function findAll() {
     $sql = "SELECT * FROM bicycles";
     return self::findBySql($sql);
+  }
+
+  static public function findById($id) {
+    $sql = "SELECT * FROM bicycles ";
+    $sql .="WHERE id='" . self::$database->escape_string($id) . "'";
+    $objArray = self::findBySql($sql);
+    if(!empty($objArray)) {
+      return array_shift($objArray);
+    } else {
+      return false;
+    }
   }
 
   static protected function instantiate($record) {
