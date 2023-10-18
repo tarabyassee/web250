@@ -2,12 +2,26 @@
 
 class Bicycle {
   //------- start of active record code --------//
-  static public $database;
+  static protected $database;
   //one value to be shared with every instance of bicycle. there is not a need ever for another instance of bicycle to have a different database connection therefore it is a static property//
 
 
   static public function set_database($database) {
     self::$database = $database;
+  }
+
+  static public function findBySql($sql) {
+    $result = self::$database->query($sql);
+    if(!$result) {
+      exit('Database query failed.');
+    }
+    return $result;
+  }
+
+
+  static public function findAll() {
+    $sql = "SELECT * FROM bicycles";
+    return self::findBySql($sql);
   }
   //end of active record code//
   public $brand;

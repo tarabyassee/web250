@@ -50,8 +50,8 @@ $bike_array = $parser->parse();
     </table>
 
     <?php 
-      $sql = "SELECT * FROM bicycles";
-      $result = Bicycle::$database->query($sql);
+     
+      $result = Bicycle::findAll();
       $row = $result->fetch_assoc();
       $result->free();
 
