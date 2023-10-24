@@ -1,16 +1,21 @@
 <?php require_once('../private/initialize.php'); ?>
 
-<?php 
-  //get requested id
+<?php
+
+  // Get requested ID
+
   $id = $_GET['id'] ?? false;
 
   if(!$id) {
     redirect_to('bicycles.php');
   }
-  //find bicycle by id
-  $bike = Bicycle::findById($id);
+
+  // Find bicycle using ID
+
+  $bike = Bicycle::find_by_id($id);
 
 ?>
+
 <?php $page_title = 'Detail: ' . $bike->name(); ?>
 <?php include(SHARED_PATH . '/public_header.php'); ?>
 

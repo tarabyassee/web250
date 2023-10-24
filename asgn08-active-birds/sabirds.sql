@@ -20,18 +20,18 @@ FLUSH PRIVILEGES;
 
 CREATE TABLE `birds` (
   `id` int(11) NOT NULL,
-  `commonName` varchar(100) NOT NULL,
+  `common_name` varchar(100) NOT NULL,
   `habitat` varchar(100) NOT NULL,
   `food` varchar(100) NOT NULL,
-  `conservationId` tinyint(4) NOT NULL,
-  `backyardTips` text NOT NULL
+  `conservation_id` tinyint(4) NOT NULL,
+  `backyard_tips` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `birds`
 --
 
-INSERT INTO `birds` (`id`, `commonName`, `habitat`, `food`, `conservationId`, `backyardTips`) VALUES
+INSERT INTO `birds` (`id`, `common_name`, `habitat`, `food`, `conservation_id`, `backyard_tips`) VALUES
 (1, 'Carolina Wren', 'Open woodlands', 'Insects', 1, 'Carolina Wrens visit suet-filled feeders during winter.'),
 (2, 'Tufted Titmouse', 'Forests', 'Insects', 1, 'Tufted Titmouse are regulars at backyard bird feeders, especially in winter. They prefer sunflower seeds but will eat suet, peanuts, and other seeds as well.'),
 (3, 'Ruby-Throated Hummingbird', 'Open woodlands', 'Nectar', 1, 'You can attract Ruby-throated Hummingbirds to your backyard by setting up hummingbird feeders or by planting tubular flowers.'),
