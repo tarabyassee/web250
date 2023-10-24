@@ -42,7 +42,7 @@
 
 <?php 
 $sql = "SELECT * FROM birds";
-$result = $database->query($sql);
+$result = Bird::$database->query($sql);
 $row = $result->fetch_assoc();
 $result->free();
 
