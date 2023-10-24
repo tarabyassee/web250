@@ -7,11 +7,11 @@ class Bird {
   public $food;
   public $nest_placement;
   public $behavior;
-  protected $conservation_id;
+  public $conservation_id;
   public $backyard_tips;
  
 
-  protected const CONSERVATION_OPTIONS = [
+  public const CONSERVATION_OPTIONS = [
     1 => 'Low concern',
     2 => 'Moderate concern',
     3 => 'Extreme concern',
@@ -30,7 +30,7 @@ class Bird {
   }
 
   
-  protected function conservation() {
+  public function conservation() {
     if($this->conservation_id > 0) {
       return self::CONSERVATION_OPTIONS[$this->conservation_id];
     } else {
