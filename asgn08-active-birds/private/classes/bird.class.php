@@ -7,7 +7,7 @@ class Bird {
   public $food;
   public $nest_placement;
   public $behavior;
-  public $conservation_id;
+  protected $conservation_id;
   public $backyard_tips;
  
 
@@ -30,7 +30,7 @@ class Bird {
   }
 
   
-  public function conservation() {
+  protected function conservation() {
     if($this->conservation_id > 0) {
       return self::CONSERVATION_OPTIONS[$this->conservation_id];
     } else {
