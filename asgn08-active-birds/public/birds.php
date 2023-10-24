@@ -41,8 +41,8 @@
     </table>
 
 <?php 
-$sql = "SELECT * FROM birds";
-$result = Bird::$database->query($sql);
+
+$result = Bird::find_all();
 $row = $result->fetch_assoc();
 $result->free();
 
