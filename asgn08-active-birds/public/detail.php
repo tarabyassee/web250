@@ -23,7 +23,7 @@
 
   <a href="birds.php">Back to the Bird List</a>
 
-  <div id="page">
+  <section id="page">
 
     <div class="detail">
       <dl>
@@ -50,7 +50,7 @@
 
     </div>
 
-  </div>
+</section>
 
 </div>
 

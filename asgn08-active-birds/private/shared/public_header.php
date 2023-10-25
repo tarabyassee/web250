@@ -3,6 +3,7 @@
 <html lang="en">
   <head>
     <title>WNC Birds <?php if(isset($page_title)) { echo '- ' . h($page_title); } ?></title>
+    <link href="<?php echo url_for('stylesheets/styles.css');?>" rel="stylesheet">
     <meta charset="utf-8">
   </head>
 

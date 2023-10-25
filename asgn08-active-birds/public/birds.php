@@ -7,8 +7,7 @@
 <h2>Bird inventory</h2>
 <p>This is a short list -- start your birding!</p>
 
-
-    <table border="1">
+    <table>
       <tr>
         <th>Name</th>
         <th>Habitat</th>
@@ -29,7 +28,7 @@ $birds = Bird::find_all();
         <td><?php echo h($bird->food); ?></td>
         <td><?php echo h($bird->conservation()); ?></td>
         <td><?php echo h($bird->backyard_tips); ?></td>
-        <td><a href="detail.php?id=<?php echo $bird->id; ?>">"View"</a></td>
+        <td id="view"><a href="detail.php?id=<?php echo $bird->id; ?>">View</a></td>
       </tr>
       <?php } ?>
 

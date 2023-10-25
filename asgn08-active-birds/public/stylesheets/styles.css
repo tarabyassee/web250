@@ -1,0 +1,56 @@
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table {
+  border: 1px solid #333;
+  border-collapse: collapse;
+  border-spacing: .5rem;
+  width: 100%;
+}
+
+td,
+th {
+  border: 2px solid #333;
+  padding: .5rem;
+}
+
+th {
+  background: #0ca309;
+  color: #fff;
+}
+
+td {
+  font-size: .8rem;
+}
+
+#view a {
+  color: #0ca309;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer :last-child {
+  font-size: .8rem;
+  font-style: italic;
+}
+
+/********** detail page **********/
+
+dt {
+  color:#0ca309;
+  font-weight: bold;
+}
+
+dd {
+  display: inline-block;
+  font-size: .8rem;
+  margin-left: 0px;
+  padding: .2rem;
+  text-align: left;
+}
+
+section {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
