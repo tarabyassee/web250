@@ -6,6 +6,8 @@ class Bicycle {
   static protected $database;
   static protected $db_columns = ['id', 'brand', 'model', 'year', 'category', 'color', 'gender', 'price', 'weight_kg', 'condition_id', 'description'];
 
+  public $errors = [];
+
   static public function set_database($database) {
     self::$database = $database;
   }
@@ -55,8 +57,23 @@ class Bicycle {
     return $object;
   }
 
+  protected function validate() {
+    $this->errors = [];
+
+    if(is_blank($this->brand)) {
+      $this->errors[] = "Brand cannot be blank.";
+    }
+    if(is_blank($this->model)) {
+      $this->errors[] = "Model cannot be blank.";
+    }
+    return $this->errors;
+  }
+
   //this is an instance method
   protected function create(){
+    $this->validate();
+    if(!empty($this->errors)) { return false; }
+
     $attributes = $this->sanitized_attributes();
     $sql = "INSERT INTO bicycles (";
     $sql .= join(', ', array_keys($attributes));
@@ -71,6 +88,9 @@ class Bicycle {
   }
 
   protected function update(){
+    $this->validate();
+    if(!empty($this->errors)) { return false; }
+
     $attributes = $this->sanitized_attributes();
     $attribute_pairs = [];
     foreach($attributes as $key => $value) {
