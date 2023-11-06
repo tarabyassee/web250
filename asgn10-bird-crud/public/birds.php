@@ -3,7 +3,9 @@
   $page_title = 'Sightings';
   include(SHARED_PATH . '/public_header.php');
 ?>
-
+    <div class="actions">
+      <a class="action" href="<?php echo url_for('/new.php'); ?>">Add Bird</a>
+    </div>
 <h2>Bird inventory</h2>
 <p>This is a short list -- start your birding!</p>
 
