@@ -9,7 +9,7 @@ $id = $_GET['id'];
 
 $bird = Bird::find_by_id($id);
 if($bird == false) {
-  redirect_to(url_for('/index.php'));
+  redirect_to(url_for('/birds.php'));
 }
 
 if(is_post_request()) {

@@ -25,7 +25,7 @@ $birds = Bird::find_all();
       <tr>
         <td><?php echo h($bird->common_name); ?></td>
         <td><?php echo h($bird->habitat); ?></td>
-        <td><?php echo h($bird->food); ?></td>
+        <td><?php echo h($bird->food); ?></td>>
         <td><?php echo h($bird->conservation()); ?></td>
         <td><?php echo h($bird->backyard_tips); ?></td>
         <td id="view"><a href="detail.php?id=<?php echo $bird->id; ?>">View</a></td>

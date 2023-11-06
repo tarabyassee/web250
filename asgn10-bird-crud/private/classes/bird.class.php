@@ -5,15 +5,13 @@ class Bird extends DatabaseObject {
   // START OF ACTIVE RECORD CODE //
     static protected $table_name = 'birds';
 
-    static protected $db_columns = ['id', 'common_name', 'habitat', 'food', 'nest_placement', 'behavior', 'conservation_id', 'backyard_tips'];
+    static protected $db_columns = ['id', 'common_name', 'habitat', 'food', 'conservation_id', 'backyard_tips'];
   // END OF ACTIVE RECORD CODE //
   
   public $id;
   public $common_name;
   public $habitat;
   public $food;
-  public $nest_placement;
-  public $behavior;
   public $conservation_id;
   public $backyard_tips;
  
@@ -30,8 +28,6 @@ class Bird extends DatabaseObject {
     $this->common_name = $args['common_name'] ?? '';
     $this->habitat = $args['habitat'] ?? '';
     $this->food = $args['food'] ?? '';
-    $this->nest_placement = $args['nest_placement'] ?? '';
-    $this->behavior = $args['behavior'] ?? '';
     $this->conservation_id = $args['conservation_id'] ?? '';
     $this->backyard_tips = $args['backyard_tips'] ?? '';
   }
