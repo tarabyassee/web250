@@ -3,7 +3,7 @@
 require_once('../private/initialize.php');
 
 if(!isset($_GET['id'])) {
-  redirect_to(url_for('/index.php'));
+  redirect_to(url_for('/birds.php'));
 }
 $id = $_GET['id'];
 
@@ -39,7 +39,7 @@ if(is_post_request()) {
 
 <div id="content">
 
-  <a class="back-link" href="<?php echo url_for('/index.php'); ?>">&laquo; Back to List</a>
+  <a class="back-link" href="<?php echo url_for('/birds.php'); ?>">&laquo; Back to List</a>
 
   <div class="bird edit">
     <h1>Edit Bird</h1>

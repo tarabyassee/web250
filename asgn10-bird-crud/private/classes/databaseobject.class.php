@@ -24,8 +24,8 @@ class DatabaseObject {
   }
 
   static public function find_all() {
-    $sql = "SELECT * FROM birds";
-    return self::find_by_sql($sql);
+    $sql = "SELECT * FROM " . static::$table_name;
+    return static::find_by_sql($sql);
   }
 
   static public function find_by_id($id) {
@@ -40,7 +40,7 @@ class DatabaseObject {
   }
 
   static protected function instantiate($record) {
-    $object = new self;
+    $object = new static;
     //automatic assignment is faster and reusable
     foreach($record as $property => $value) {
       if(property_exists($object, $property)) {
