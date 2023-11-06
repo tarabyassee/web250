@@ -1,9 +1,11 @@
 <?php
 
-class Bird {
+class Bird extends DatabaseObject {
 
   // START OF ACTIVE RECORD CODE //
-    
+    static protected $table_name = 'birds';
+
+    static protected $db_columns = ['id', 'common_name', 'habitat', 'food', 'nest_placement', 'behavior', 'conservation_id', 'backyard_tips'];
   // END OF ACTIVE RECORD CODE //
   
   public $id;
@@ -41,6 +43,15 @@ class Bird {
     } else {
       return "Unknown";
     }
+  }
+
+  protected function validate() {
+    $this->errors = [];
+
+    if(is_blank($this->common_name)) {
+      $this->errors[] = "Brand cannot be blank.";
+    }
+    return $this->errors;
   }
 
 }
