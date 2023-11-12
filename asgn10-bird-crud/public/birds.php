@@ -16,7 +16,7 @@
         <th>Food</th>
         <th>Conservation</th>
         <th>Backyard Tips</th>
-        <th>&nbsp;</th>
+        <th colspan="3">&nbsp;</th>
       </tr>
 
 <?php

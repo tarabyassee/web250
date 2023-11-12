@@ -63,18 +63,21 @@ dl {
 }
 
 dt {
-  float: left;
-  font-weight: bold;
-  width: 125px;
-}
-
-dd {
-  float: left;
-  margin-left: 1em;
+  border-bottom: groove;
+  width: 150px;
 }
 
 dd input {
-  border: red solid 1px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  min-width: 500px;
+}
+
+select {
+  padding: .25rem;
+}
+
+textarea {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   min-width: 500px;
 }
 
@@ -82,6 +85,13 @@ dd input {
   clear: both;
   margin: 1em 0 1em 75px;
 }
+
+/********** edit, new content **********/
+#edit-content dt,
+#content dt {
+  border-bottom: none;
+}
+
 
 /********** errors **********/
 /* Errors */

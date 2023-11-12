@@ -35,7 +35,6 @@ if(!isset($bird)) {
 
 <dl>
   <dt>Backyard Tips</dt>
-  <dd><input type="text" name="bird[backyard_tips]" value="<?php echo h($bird->backyard_tips); ?>" /></dd>
+  <dd><textarea name="bird[backyard_tips]" rows="5" cols="50"><?php echo h($bird->backyard_tips); ?></textarea></dd>
 </dl>
-
 

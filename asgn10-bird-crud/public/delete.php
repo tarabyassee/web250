@@ -1,6 +1,7 @@
 <?php
 
 require_once('../private/initialize.php');
+include(SHARED_PATH . '/public_header.php'); 
 
 if(!isset($_GET['id'])) {
   redirect_to(url_for('/index.php'));
