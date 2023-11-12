@@ -38,7 +38,7 @@ footer :last-child {
 /********** detail page **********/
 
 dt {
-  color:#0ca309;
+  color: #0ca309;
   font-weight: bold;
 }
 
@@ -53,4 +53,59 @@ dd {
 section {
   margin-bottom: 2rem;
   margin-top: 2rem;
+}
+
+/********** form-fields **********/
+dl {
+  clear: both;
+  overflow: hidden;
+  margin: 0.5em 0;
+}
+
+dt {
+  float: left;
+  font-weight: bold;
+  width: 125px;
+}
+
+dd {
+  float: left;
+  margin-left: 1em;
+}
+
+dd input {
+  border: red solid 1px;
+  min-width: 500px;
+}
+
+#operations {
+  clear: both;
+  margin: 1em 0 1em 75px;
+}
+
+/********** errors **********/
+/* Errors */
+
+.errors {
+  display: inline-block;
+  border: 2px solid red;
+  color: red;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.errors ul {
+  margin-bottom: 0;
+  padding-left: 1em;
+}
+
+/* Session Messages */
+
+#message {
+  color: #0B61A5;
+  background: white;
+  border: 2px solid #0B61A5;
+  padding: 1em 15px;
+  margin: 1em 30px;
+  width: 890px;
 }

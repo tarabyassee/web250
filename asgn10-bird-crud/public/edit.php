@@ -1,6 +1,7 @@
 <?php
 
 require_once('../private/initialize.php');
+include(SHARED_PATH . '/public_header.php'); 
 
 if(!isset($_GET['id'])) {
   redirect_to(url_for('/birds.php'));
@@ -37,7 +38,7 @@ if(is_post_request()) {
 <?php $page_title = 'Edit Bird'; ?>
 
 
-<div id="content">
+<div id="edit-content">
 
   <a class="back-link" href="<?php echo url_for('/birds.php'); ?>">&laquo; Back to List</a>
 
