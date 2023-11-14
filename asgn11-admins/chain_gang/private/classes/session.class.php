@@ -3,6 +3,10 @@
   class Session {
     private $admin_id;
 
+    public $username;
+
+    private $last_login;
+
     public function __construct() {
       session_start();
       $this->check_stored_login();
