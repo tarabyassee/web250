@@ -2,11 +2,8 @@
 
   class Session {
     private $admin_id;
-
     public $username;
-
     private $last_login;
-
     public const MAX_LOGIN_AGE = 60*60*24; //1 day
 
     public function __construct() {
@@ -57,7 +54,20 @@
       }
     }
 
+    public function message($msg="") {
+      if(!empty($msg)) {
+        //this is a set message
+        $_SESSION['message'] = $msg;
+        return true;
+      } else {
+        //this is a get message
+        return $_SESSION['message'] ?? '';
+      }
+    }
 
+    public function clear_message() {
+      unset($_SESSION['message']);
+    }
 
   }
 ?>
