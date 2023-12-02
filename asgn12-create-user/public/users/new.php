@@ -2,7 +2,7 @@
 
 require_once('../../private/initialize.php');
 include(SHARED_PATH . '/public_header.php'); 
-require_login();
+/* require_login(); */
 
 if(is_post_request()) {
 
@@ -40,7 +40,7 @@ if(is_post_request()) {
 
     <form action="<?php echo url_for('/users/new.php'); ?>" method="post">
 
-      <?php include('form_fields.php'); ?>
+      <?php include('form-fields.php'); ?>
 
       <div id="operations">
         <input type="submit" value="Create User" />

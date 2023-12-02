@@ -11,7 +11,8 @@ $users = User::find_all();
   
 ?>
 <?php $page_title = 'Users'; 
-include(SHARED_PATH . '/../public_header.php'); ?>
+/* include(SHARED_PATH . '/../public_header.php'); */
+?> 
 
 <div id="content">
   <div class="users listing">
@@ -51,4 +52,4 @@ include(SHARED_PATH . '/../public_header.php'); ?>
 
 </div>
 
-<?php include(SHARED_PATH . '/../public_footer.php'); ?>
+
