@@ -2,7 +2,7 @@
 
 require_once('../../private/initialize.php');
 
-require_login();
+/* require_login(); */
 
 include(SHARED_PATH . '/public_header.php'); 
 
@@ -44,7 +44,7 @@ if(is_post_request()) {
 
 <div id="edit-content">
 
-  <a class="back-link" href="<?php echo url_for('/users/birds.php'); ?>">&laquo; Back to List</a>
+  <a class="back-link" href="<?php echo url_for('/users/index.php'); ?>">&laquo; Back to List</a>
 
   <div class="user edit">
     <h1>Edit User</h1>
@@ -53,7 +53,7 @@ if(is_post_request()) {
 
     <form action="<?php echo url_for('/users/edit.php?id=' . h(u($id))); ?>" method="post">
 
-      <?php include('form_fields.php'); ?>
+      <?php include('form-fields.php'); ?>
       
       <div id="operations">
         <input type="submit" value="Edit User" />

@@ -1,6 +1,6 @@
 <?php require_once('../../private/initialize.php');
   include(SHARED_PATH . '/public_header.php');
-  require_login();
+/*   require_login(); */
 ?>
 
 <?php
@@ -19,7 +19,7 @@ $user = User::find_by_id($id);
 
   <div class="user show">
 
-    <h1>User: <?php echo h($user->full_name); ?></h1>
+    <h1>User: <?php echo h($user->full_name()); ?></h1>
 
     <div class="attributes">
       <dl>
