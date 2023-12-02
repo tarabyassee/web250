@@ -14,6 +14,7 @@ $users = User::find_all();
  include(SHARED_PATH . '/../../private/shared/public_header.php'); 
 ?> 
 
+
 <div id="content">
   <div class="users listing">
     <h1>Users</h1>
