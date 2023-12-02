@@ -11,14 +11,14 @@ $users = User::find_all();
   
 ?>
 <?php $page_title = 'Users'; 
-include(SHARED_PATH . '/public_header.php'); ?>
+include(SHARED_PATH . '/../public_header.php'); ?>
 
 <div id="content">
   <div class="users listing">
     <h1>Users</h1>
 
     <div class="actions">
-      <a class="action" href="<?php echo url_for('/users/new.php'); ?>">Add User</a>
+      <a class="action" href="<?php echo url_for('/new.php'); ?>">Add User</a>
     </div>
 
   	<table class="list">
@@ -51,4 +51,4 @@ include(SHARED_PATH . '/public_header.php'); ?>
 
 </div>
 
-<?php include(SHARED_PATH . '/public_footer.php'); ?>
+<?php include(SHARED_PATH . '/../public_footer.php'); ?>

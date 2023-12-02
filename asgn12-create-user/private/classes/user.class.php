@@ -131,3 +131,4 @@ class User extends DatabaseObject
     }
   }
 }
+?>
