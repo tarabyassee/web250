@@ -2,7 +2,7 @@
 
 require_once('../../private/initialize.php');
 
-/* require_login(); */
+require_login();
 
 include(SHARED_PATH . '/public_header.php'); 
 
@@ -20,9 +20,9 @@ if($user == false) {
 if(is_post_request()) {
 
   // Save record using post parameters
-  $args = $_POST['admin'];
-  $admin->merge_attributes($args);
-  $result = $admin->save();
+  $args = $_POST['user'];
+  $user->merge_attributes($args);
+  $result = $user->save();
 
   if($result === true) {
     $_SESSION['message'] = 'The user was updated successfully.';

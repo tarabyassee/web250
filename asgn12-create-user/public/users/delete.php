@@ -12,7 +12,7 @@ if(!isset($_GET['id'])) {
 $id = $_GET['id'];
 $user = User::find_by_id($id);
 if($user == false) {
-  redirect_to(url_for('users/index.php'));
+  redirect_to(url_for('/users/index.php'));
 }
 
 if(is_post_request()) {
@@ -42,7 +42,7 @@ if(is_post_request()) {
 
     <form action="<?php echo url_for('/users/delete.php?id=' . h(u($id))); ?>" method="post">
       <div id="operations">
-        <input type="submit" name="commit" value="Delete Admin" />
+        <input type="submit" name="commit" value="Delete User" />
       </div>
     </form>
   </div>

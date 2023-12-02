@@ -1,7 +1,7 @@
 <?php
 require_once('../../private/initialize.php');
 
-/* require_login(); */
+require_login();
 ?>
 
 <?php
@@ -11,7 +11,7 @@ $users = User::find_all();
   
 ?>
 <?php $page_title = 'Users'; 
-/* include(SHARED_PATH . '/../public_header.php'); */
+ include(SHARED_PATH . '/../../private/shared/public_header.php'); 
 ?> 
 
 <div id="content">
@@ -19,7 +19,7 @@ $users = User::find_all();
     <h1>Users</h1>
 
     <div class="actions">
-      <a class="action" href="<?php echo url_for('/new.php'); ?>">Add User</a>
+      <a class="action" href="<?php echo url_for('users/new.php'); ?>">Add User</a>
     </div>
 
   	<table class="list">
