@@ -32,10 +32,10 @@
   // Load class definitions manually
 
   // -> Individually
-   require_once('classes/bird.class.php');
+/*    require_once('classes/bird.class.php');
    require_once('classes/databaseobject.class.php');
    require_once('classes/session.class.php');
-   require_once('classes/user.class.php');
+   require_once('classes/user.class.php'); */
   // -> All classes in directory
   foreach(glob('classes/*.class.php') as $file) {
     require_once($file);

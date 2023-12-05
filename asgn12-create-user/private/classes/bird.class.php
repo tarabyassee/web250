@@ -1,5 +1,5 @@
 <?php
-
+require_once('databaseobject.class.php');
 class Bird extends DatabaseObject {
 
   // START OF ACTIVE RECORD CODE //
