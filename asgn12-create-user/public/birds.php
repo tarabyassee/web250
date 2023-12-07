@@ -6,7 +6,10 @@
     <div class="actions">
       <?php if($session->is_logged_in()){ ?>
         <a class="action" href="<?php echo url_for('/new.php'); ?>">Add Bird</a><br>
-        <a class="action" href="<?php echo url_for('users/logout.php'); ?>">Logout</a>
+        <a class="action" href="<?php echo url_for('users/logout.php'); ?>">Logout, <?php echo $session->first_name?></a><br>
+      <?php } ?>
+      <?php if($session->is_admin_logged_in()){ ?>
+        <a class="action" href="<?php echo url_for('/users/admin/admin_index.php'); ?>">Members</a><br>
       <?php } ?>
     </div>
 <h2>Bird inventory</h2>

@@ -18,7 +18,8 @@ $users = User::find_all();
   exit;
  }
 ?> 
-
+<a class="action" href="<?php echo url_for('birds.php'); ?>">Birds</a><br>
+<a class="action" href="<?php echo url_for('users/logout.php'); ?>">Logout, <?php echo $session->first_name?></a>
 
 <div id="content">
   <div class="users listing">
