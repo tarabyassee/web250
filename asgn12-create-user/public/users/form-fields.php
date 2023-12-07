@@ -27,11 +27,6 @@ if(!isset($user)) {
 </dl>
 
 <dl>
-  <dt>User Level (a=admin, m=member)</dt>
-  <dd><input type="text" name="user[user_level]" value="<?php echo h($user->user_level); ?>" /></dd>
-</dl>
-
-<dl>
   <dt>Password</dt>
   <dd><input type="password" name="user[password]" value="" /></dd>
 </dl>

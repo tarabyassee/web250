@@ -25,11 +25,15 @@ if(is_post_request()) {
     if($user != false && $user->verify_password($password))  {
       // Mark user as logged in
       $session->login($user);
-      redirect_to(url_for('/users/index.php'));
-    } else {
+      if ($user->user_level === 'a') {
+        redirect_to(url_for('users/admin/admin_index.php'));
+      } elseif ($user->user_level === 'm') {
+        redirect_to(url_for('birds.php'));
+      } else {
       // username not found or password does not match
       $errors[] = "Log in was unsuccessful.";
     }
+   }
   }
 }
 

@@ -3,7 +3,12 @@
   $page_title = 'Sightings';
   include(SHARED_PATH . '/public_header.php');
 ?>
-
+    <div class="actions">
+      <?php if($session->is_logged_in()){ ?>
+        <a class="action" href="<?php echo url_for('/new.php'); ?>">Add Bird</a><br>
+        <a class="action" href="<?php echo url_for('users/logout.php'); ?>">Logout</a>
+      <?php } ?>
+    </div>
 <h2>Bird inventory</h2>
 <p>This is a short list -- start your birding!</p>
 
@@ -28,9 +33,14 @@ $birds = Bird::find_all();
         <td><?php echo h($bird->food); ?></td>>
         <td><?php echo h($bird->conservation()); ?></td>
         <td><?php echo h($bird->backyard_tips); ?></td>
-      </tr>
-      <?php } ?>
 
+      <?php if ($session->is_logged_in()) {?>
+        <td id="view"><a href="detail.php?id=<?php echo $bird->id; ?>">View</a></td>
+        <td id="view"><a href="edit.php?id=<?php echo $bird->id; ?>">Edit</a></td>
+        <td id="view"><a href="delete.php?id=<?php echo $bird->id; ?>">Delete</a></td>
+      <?php } ?>
+      </tr>
+  <?php } ?>
     </table>
 
 <?php include(SHARED_PATH . '/public_footer.php'); ?>

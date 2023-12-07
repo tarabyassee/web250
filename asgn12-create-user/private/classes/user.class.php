@@ -14,7 +14,7 @@ class User extends DatabaseObject
   public $last_name;
   public $email;
   public $username;
-  public $user_level;
+  public $user_level = 'm';
   protected $hashed_password;
   public $password;
   public $confirm_password;

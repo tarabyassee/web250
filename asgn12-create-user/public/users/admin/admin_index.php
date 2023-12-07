@@ -11,7 +11,12 @@ $users = User::find_all();
   
 ?>
 <?php $page_title = 'Users'; 
- include(SHARED_PATH . '/../../private/shared/admin_header.php'); 
+ include(SHARED_PATH . '/../../private/shared/admin_header.php');
+
+ if(!$session->is_admin_logged_in()){
+  header("Location: ../../birds.php");
+  exit;
+ }
 ?> 
 
 
